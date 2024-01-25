@@ -3,7 +3,7 @@ var config = require("./config.js")
 var cors = require('cors')
 
 const app  = express();
-
+const PORT = 3001;
 app.use(cors())
 app.use(express.json());
 
@@ -19,8 +19,8 @@ app.get('/greet/:name', (req, res) => {
 app.use("/book", require("./routes/pages/book.js"))
 app.use("/movie", require("./routes/pages/movie.js"))
 
-app.listen(config.PORT,'0.0.0.0', () => {
-    console.log('App is listening to port: ' + config.PORT); 
+app.listen(PORT,'0.0.0.0', () => {
+    console.log('App is listening to port: ' + PORT); 
 });
 
 
