@@ -19,7 +19,7 @@ app.get('/greet/:name', (req, res) => {
 app.use("/book", require("./routes/pages/book.js"))
 app.use("/movie", require("./routes/pages/movie.js"))
 
-app.listen(config.PORT, () => {
+app.listen(config.PORT,'0.0.0.0', () => {
     console.log('App is listening to port: ' + config.PORT); 
 });
 
